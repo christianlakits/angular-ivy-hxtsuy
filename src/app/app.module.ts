@@ -1,13 +1,23 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { DemoMaterialModule } from './material.module';
+import { PdfViewerModule } from './pdf-viewer/pdf-viewer.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    NoopAnimationsModule,
+    DemoMaterialModule,
+
+    PdfViewerModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
